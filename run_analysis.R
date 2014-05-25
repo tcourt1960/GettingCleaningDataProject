@@ -1,14 +1,18 @@
-# Project Assignment for "Getting and Cleaning Data" Coursera 
+## Project Assignment for "Getting and Cleaning Data" Coursera 
+
+# All read.table commands assume the associated data files are in the working directory
+# The test data is located in a folder test, and the training data is located in a folder called train.
+# The test and train folder are located in the Working directory.
 
 # Read in training and test data
-train_data <- read.table("X_train.txt", stringsAsFactors=FALSE, header=FALSE)
-test_data<- read.table("X_test.txt", stringsAsFactors=FALSE, header=FALSE)
+train_data <- read.table("train/X_train.txt", stringsAsFactors=FALSE, header=FALSE)
+test_data<- read.table("test/X_test.txt", stringsAsFactors=FALSE, header=FALSE)
 
 #ABOVE WORKS. GOOD to GO
 
 # Read in training and test activity codes
-train_codes <- read.table("y_train.txt", stringsAsFactors=FALSE, header=FALSE)
-test_codes <- read.table("y_test.txt", stringsAsFactors=FALSE, header=FALSE)
+train_codes <- read.table("train/y_train.txt", stringsAsFactors=FALSE, header=FALSE)
+test_codes <- read.table("test/y_test.txt", stringsAsFactors=FALSE, header=FALSE)
 
 #ABOVE WORKS.  GOOD to GO
 
@@ -23,8 +27,8 @@ features<- read.table("features.txt", stringsAsFactors=TRUE, header=FALSE)
 #Great! Above works!
 
 #REad in Subjects files for both test and training
-subject_test<-read.table("subject_test.txt",stringsAsFactors=FALSE, header =FALSE)
-subject_train<-read.table("subject_train.txt",stringsAsFactors=FALSE, header =FALSE)
+subject_test<-read.table("test/subject_test.txt",stringsAsFactors=FALSE, header =FALSE)
+subject_train<-read.table("train/subject_train.txt",stringsAsFactors=FALSE, header =FALSE)
 
 #Great. Above works
 
