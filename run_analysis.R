@@ -108,4 +108,4 @@ library(reshape2)
 melted<-melt(selected_data,id=c("Activity","Subject"))
 tidyset<-dcast(melted, Subject + Activity ~ variable, fun.aggregate=mean)
 
-write.csv(tidyset,file="tidyset.csv",row.names=TRUE)
+write.csv(tidyset,file="tidyset.txt",row.names=TRUE)
